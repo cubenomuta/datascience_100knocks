@@ -1,4 +1,4 @@
-# kaggle_Wild-Blueberry-Yield
+# kaggle-
 ## Log
 ### 20230603
   - [Kaggle日記](https://github.com/fkubota/kaggle-Cornell-Birdcall-Identification#readme)を参考にしながら初めてのGit Hubを書いてる
