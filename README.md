@@ -19,8 +19,10 @@
       - query('customer_id == "CS018205000001" and amount >= 1000')  
             - クエリ条件に論理演算を加える場合それらを一つの'で囲う → 'a'and'b'のように分けるとうまくいかない
       - 文字列一致 : str.match, str.stratswith, str.endswith, str.contain  
-            - df_store.query('store_cd.str.startswith("S14")').head(10)って感じで使う  
-            - str.match(".*1$")は、.は任意の1文字、 *は0回以上の繰り返しを表す。 $は末尾の位置指定文字。 ^は先頭の位置指定文字。
+            - df_store.query('store_cd.str.startswith("S14")',engine = 'python').head(10)って感じで使う  
+            - engine = 'python' と指定しないとエラーが起こる場合があるので注意
+            - str.match(".*1$")は、.は任意の1文字、 *は0回以上の繰り返しを表す、 $は末尾の位置指定文字、 ^は先頭の位置指定文字
+            - これらの関数を使用する場合,欠損地NaNがある列を条件に指定するとエラーが起こる → str.endswith('e', na=False)とする
 
  
   
